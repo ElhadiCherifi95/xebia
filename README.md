@@ -24,6 +24,7 @@ NB: Veuillez spécifier le chemin du fichier en entrée
 mvn clean install
 java -jar target/MowItNow.jar ''''''chemin du fichier en entrée''''''
 ```
+#### Prepare the configuration file
 
 ## Running the tests
 
