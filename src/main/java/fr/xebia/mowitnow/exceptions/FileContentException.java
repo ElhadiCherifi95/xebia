@@ -2,7 +2,7 @@ package fr.xebia.mowitnow.exceptions;
 
 
 /**
- *Classe qui implémente les exceptions liées aux fichiers lus en entrée
+ *Classe qui implémente les exceptions liées au fichier lu en entrée
  * 
  * 
  * @author Elhadi CHERIFI* 

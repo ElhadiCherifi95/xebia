@@ -1,13 +1,23 @@
 package fr.xebia.mowitnow.model;
 
 import org.junit.Test;
-
 import junit.framework.TestCase;
+
 
 public class CoordinatesTest extends TestCase {
 	
 	Coordinates coordinates = new Coordinates(3, 2);
-	Surface surface = new Surface(new Coordinates(5, 5));
+	Surface surface = new Surface(5, 5);
+	
+	@Test(expected = java.lang.IllegalArgumentException.class)
+	public void testNegativeCooridnatesAbciss() {
+		new Coordinates(2, 2);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testNegativeCooridnatesOrdinate() {
+		new Coordinates(1, -2);
+	}
 
 	@Test
 	public void testForwardAbciss() {
@@ -31,6 +41,18 @@ public class CoordinatesTest extends TestCase {
 	public void testBackwardOrdinate() {
 		coordinates.backwardOrdinate();
 		assertEquals(1,coordinates.getOrdinate());
+	}
+	
+	@Test
+	public void testEquals() {
+		Coordinates coordinates = new Coordinates(3, 2);
+		Coordinates coordinatesCompared;
+		
+		coordinatesCompared = new Coordinates(3, 2);
+		assertEquals(true,coordinates.equals(coordinatesCompared));
+		
+		coordinatesCompared = new Coordinates(3, 5);
+		assertEquals(false,coordinates.equals(coordinatesCompared));
 	}
 
 	

@@ -17,11 +17,16 @@ public class Coordinates {
 	 * @param abciss
 	 * @param ordinate
 	 */
-	public Coordinates(int abciss, int ordinate) {
-		if(abciss>0)
+	public Coordinates(int abciss, int ordinate) throws IllegalArgumentException  {
+		if(abciss < 0 || ordinate < 0) {
+			throw new IllegalArgumentException("Les coordonnées d'une position doivent être positifs");
+			
+		}
+		else {
 			this.abciss = abciss;
-		if(ordinate>0)
 			this.ordinate = ordinate;
+		}
+		
 	}
 
 
@@ -97,6 +102,44 @@ public class Coordinates {
 		
 	};
 
+
+
+
+	
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + abciss;
+		result = prime * result + ordinate;
+		return result;
+	}
+
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Coordinates other = (Coordinates) obj;
+		if (abciss != other.abciss)
+			return false;
+		if (ordinate != other.ordinate)
+			return false;
+		return true;
+	}
 
 
 

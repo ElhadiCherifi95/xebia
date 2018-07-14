@@ -61,7 +61,7 @@ public class Reader {
 
 			Surface surface;
 			try {
-				surface = new Surface(new Coordinates(Integer.parseInt(dimensions[0]), Integer.parseInt(dimensions[1])));
+				surface = new Surface(Integer.parseInt(dimensions[0]), Integer.parseInt(dimensions[1]));
 			} catch (NumberFormatException e) {
 				throw new FileContentException("Les dimensions de la surface sont érronées (2 integer sont requis)");
 			}
@@ -80,7 +80,7 @@ public class Reader {
 				try {
 					initialCoordinates = new Coordinates(Integer.parseInt(positions[0]), Integer.parseInt(positions[1]));
 				} catch (NumberFormatException e) {
-					throw new FileContentException("La position initiale de la tondeuse X est érronnées (2 integer sont requis)");
+					throw new FileContentException("La position initiale de la tondeuse "+queueControles.size()+" est érronnées (2 integer sont requis)");
 				}
 
 				initialOrientation=Orientation.getOrientation(positions[2]);			

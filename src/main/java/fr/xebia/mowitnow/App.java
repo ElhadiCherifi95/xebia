@@ -9,6 +9,7 @@ public class App {
 		
 		Reader reader;
 		
+		
 		if (args.length > 0) {
 			reader = new Reader(args[0]);
 			

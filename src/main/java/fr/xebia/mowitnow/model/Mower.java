@@ -101,6 +101,71 @@ public class Mower {
 	public void setSurface(Surface surface) {
 		this.surface = surface;
 	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	/*@Override
+	public boolean equals(Object obj) {
+		Mower mower= (Mower) obj;
+		return mower.getSurface() ==this.surface && mower.getPosition() ==this.position && this.getQueueControles().equals(mower.getQueueControles());
+	}*/
+
+	
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((position == null) ? 0 : position.hashCode());
+		result = prime * result + ((queueControles == null) ? 0 : queueControles.hashCode());
+		result = prime * result + ((surface == null) ? 0 : surface.hashCode());
+		return result;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Mower other = (Mower) obj;
+		if (position == null) {
+			if (other.position != null)
+				return false;
+		} else if (!position.equals(other.position))
+			return false;
+		if (queueControles == null) {
+			if (other.queueControles != null)
+				return false;
+		} else if (!queueControles.equals(other.queueControles))
+			return false;
+		if (surface == null) {
+			if (other.surface != null)
+				return false;
+		} else if (!surface.equals(other.surface))
+			return false;
+		return true;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Mower [position=" + position + ", surface=" + surface + ", queueControles=" + queueControles + "]";
+	}
 	
 	
 	
