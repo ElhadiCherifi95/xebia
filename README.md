@@ -1,9 +1,9 @@
-# Xebia: MowItNow project
+# Xebia: Projet MowItNow
 
 Dans le cadre d'un processus de recrutement il est demandé de développer une tondeuse à gazon automatique, destinée aux
 surfaces rectangulaires.
 
-## Getting Started
+## Pour commencer
 
 Veuillez éxecuter les commandes suivantes dans le dossier désiré pour rapatrier le projet en local pour d'éventuels tests/développements:
 ```
@@ -11,14 +11,14 @@ git init
 git remote add origin https://github.com/lafourit/xebia.git
 git pull origin
 ```
-### Prerequisites
+### Prérequis
 
-* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Compiler
+* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Compiler Veuillez changer votre variable d'environnement JAVA_HOME pour pointer vers la bonne jdk
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-### Installing
+### Installation
 
-#### Some functional informations
+#### Quelques informations fonctionnelles
 
 La tondeuse peut être programmée pour parcourir l'intégralité de la surface.
 La position de la tondeuse est représentée par une combinaison de coordonnées (x,y) et d'une
@@ -44,7 +44,7 @@ bouge que lorsque la première a exécuté intégralement sa série d'instructio
 Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son
 orientation.
 
-#### Prepare the configuration file
+#### Préparation du fichier de configuration
 
 Pour programmer la tondeuse, on lui fournit un fichier d'entrée construit comme suit :
 
@@ -61,7 +61,13 @@ tondeuse a deux lignes la concernant :
   ● La seconde ligne est une série d'instructions ordonnant à la tondeuse d'explorer la
     pelouse. Les instructions sont une suite de caractères sans espaces.
 
-#### Launching
+#### Lancement des tests
+
+Veuillez exécuter les commandes dans le dossier contenant le projet pour lancer la totalité des tests du projet.
+```
+mvn test
+```
+#### Lancement du programme
 
 Veuillez exécuter les commandes dans le dossier contenant le projet pour packager et lancer le projet.
 NB: Veuillez spécifier le chemin du fichier en entrée
@@ -70,14 +76,6 @@ mvn clean install
 java -jar target/MowItNow.jar ''''''chemin du fichier en entrée''''''
 ```
 
-
-## Running the tests
-
-Veuillez exécuter les commandes dans le dossier contenant le projet pour lancer la totalité des tests du projet.
-```
-mvn clean test
-```
-
-## Authors
+## Auteurs
 
 * **Elhadi CHERIFI** - *Initial work* - [lafourit](https://github.com/lafourit)
