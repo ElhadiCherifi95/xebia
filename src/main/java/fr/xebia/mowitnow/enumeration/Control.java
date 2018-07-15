@@ -11,13 +11,15 @@ import fr.xebia.mowitnow.model.Position;
 public enum Control {
 	
 	//les différents controles appliquées à une tondeuse implémentant la méthode abstraite
-	RIGHT("D"){
+	D("D"){
 		@Override
 		public Position apply(Position position) { return new Position(position.getCoordinates(), position.getOrientation().next());}
-	},LEFT("G"){
+	},
+	G("G"){
 		@Override
 		public Position apply(Position position) {return new Position(position.getCoordinates(), position.getOrientation().back());}
-	},FORWARD("A"){
+	},
+	A("A"){
 		@Override
 		public Position apply(Position position) {return new Position(position.getOrientation().forward(position.getCoordinates()), position.getOrientation());}
 	};
@@ -56,18 +58,18 @@ public enum Control {
 	 * Méthode qui récupère le controle à partir d'un string
 	 * @return l'orientation
 	 */
-	public static Control getOrientation(String dir) {
+	public static Control getControl(String dir) {
 		if (dir == null) {
             return null;
         }
 
         switch (dir) {
         case "D":
-            return RIGHT;
+            return D;
         case "G":
-            return LEFT;
+            return G;
         case "A":
-            return FORWARD;
+            return A;
         default:
             return null;
         }

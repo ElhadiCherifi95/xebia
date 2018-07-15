@@ -86,7 +86,7 @@ public class Reader {
 				initialOrientation=Orientation.getOrientation(positions[2]);			
 				initialPosition = new Position(initialCoordinates, initialOrientation);
 				for(String c : commands.split("")) {
-					queueControles.add(Control.getOrientation(c));
+					queueControles.add(Control.getControl(c));
 				}
 
 				queueMowers.add(new Mower(initialPosition, surface, queueControles));

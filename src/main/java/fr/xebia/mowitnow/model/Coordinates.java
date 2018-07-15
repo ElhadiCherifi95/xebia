@@ -19,7 +19,7 @@ public class Coordinates {
 	 */
 	public Coordinates(int abciss, int ordinate) throws IllegalArgumentException  {
 		if(abciss < 0 || ordinate < 0) {
-			throw new IllegalArgumentException("Les coordonnées d'une position doivent être positifs");
+			throw new IllegalArgumentException();
 			
 		}
 		else {

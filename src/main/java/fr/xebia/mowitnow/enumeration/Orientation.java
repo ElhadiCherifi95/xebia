@@ -11,7 +11,7 @@ import fr.xebia.mowitnow.model.Coordinates;
 public enum Orientation {
 
 	//les différentes orientations d'une tondeuse
-	NORTH("N"){
+	N("N"){
 		/**
 		 * {@link Orientation#forward(Coordinates)}
 		 */
@@ -21,7 +21,7 @@ public enum Orientation {
 			return coordinates;
 		}
 			
-	},SOUTH("S"){
+	},S("S"){
 		
 		/**
 		 * {@link Orientation#forward(Coordinates)}
@@ -32,7 +32,7 @@ public enum Orientation {
 			return coordinates;
 		}
 		
-	},WEST("W"){
+	},W("W"){
 		
 		/**
 		 * {@link Orientation#forward(Coordinates)}
@@ -44,7 +44,7 @@ public enum Orientation {
 		}
 		
 		
-	},EAST("E"){
+	},E("E"){
 		
 		/**
 		 * {@link Orientation#forward(Coordinates)}
@@ -81,13 +81,13 @@ public enum Orientation {
 
         switch (dir) {
         case "N":
-            return NORTH;
+            return N;
         case "E":
-            return EAST;
+            return E;
         case "S":
-            return SOUTH;
+            return S;
         case "W":
-            return WEST;
+            return W;
         default:
             return null;
         }
@@ -109,14 +109,14 @@ public enum Orientation {
     
   //Bloc static permettant la definition des orientation à droite et à gauche de chaque énumération
   	static {
-          NORTH.left = WEST;
-          NORTH.right = EAST;
-          WEST.left = SOUTH;
-          WEST.right = NORTH;
-          EAST.left = NORTH;
-          EAST.right = SOUTH;
-          SOUTH.left = EAST;
-          SOUTH.right = WEST;
+          N.left = W;
+          N.right = E;
+          W.left = S;
+          W.right = N;
+          E.left = N;
+          E.right = S;
+          S.left = E;
+          S.right = W;
       }
 	
 	

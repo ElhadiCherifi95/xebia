@@ -6,25 +6,19 @@ import junit.framework.TestCase;
 
 public class SurfaceTest extends TestCase {
 	
-	Surface surface = new Surface(5, 5);
+	
 
+	/**
+     * Méthode de test pour {@link fr.xebia.mowitnow.model.Surface#isValidCoordinatesInSurface(Coordinates)}.
+     */
 	@Test
 	public void testIsValidCoordinatesInSurfaceAbciss() {		
+		Surface surface = new Surface(5, 5);
 		assertEquals(false, surface.isValidCoordinatesInSurface(new Coordinates(6, 4)));
-	}
-	
-	@Test
-	public void testIsValidCoordinatesInSurfaceOrdinate() {		
 		assertEquals(false, surface.isValidCoordinatesInSurface(new Coordinates(4, 6)));
-	}
-	
-	@Test
-	public void testIsValidCoordinatesInSurfaceMaxCoordinates() {		
 		assertEquals(true, surface.isValidCoordinatesInSurface(new Coordinates(5, 5)));
-	}
-	
-	@Test
-	public void testIsValidCoordinatesInSurface() {		
 		assertEquals(true, surface.isValidCoordinatesInSurface(new Coordinates(2, 3)));
 	}
+	
+	
 }

@@ -10,9 +10,8 @@ public class App {
 		Reader reader;
 		
 		
-		if (args.length > 0) {
-			reader = new Reader(args[0]);
-			
+		if (args.length > 0) {			
+			reader = new Reader(args[0]);			
 			reader.read().forEach(mower -> System.out.println(mower.apply()));
 
 		} else {

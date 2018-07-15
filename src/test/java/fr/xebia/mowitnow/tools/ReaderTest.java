@@ -59,34 +59,34 @@ public class ReaderTest {
 		*/
 		surface = new Surface(5,5);
 		coordinates = new Coordinates(1, 2);
-		position = new Position(coordinates, Orientation.NORTH);
+		position = new Position(coordinates, Orientation.N);
 		queueControles = new LinkedList<Control>();
-		queueControles.add(Control.LEFT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.LEFT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.LEFT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.LEFT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.FORWARD);
+		queueControles.add(Control.G);
+		queueControles.add(Control.A);
+		queueControles.add(Control.G);
+		queueControles.add(Control.A);
+		queueControles.add(Control.G);
+		queueControles.add(Control.A);
+		queueControles.add(Control.G);
+		queueControles.add(Control.A);
+		queueControles.add(Control.A);
 		mower = new Mower(position, surface, queueControles );
 		
 		mowersQueueTest.add(mower);
 		
 		coordinates = new Coordinates(3, 3);
-		position = new Position(coordinates, Orientation.EAST);
+		position = new Position(coordinates, Orientation.E);
 		queueControles = new LinkedList<Control>();
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.RIGHT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.RIGHT);
-		queueControles.add(Control.FORWARD);
-		queueControles.add(Control.RIGHT);
-		queueControles.add(Control.RIGHT);
-		queueControles.add(Control.FORWARD);
+		queueControles.add(Control.A);
+		queueControles.add(Control.A);
+		queueControles.add(Control.D);
+		queueControles.add(Control.A);
+		queueControles.add(Control.A);
+		queueControles.add(Control.D);
+		queueControles.add(Control.A);
+		queueControles.add(Control.D);
+		queueControles.add(Control.D);
+		queueControles.add(Control.A);
 		mower = new Mower(position, surface, queueControles);
 
 		mowersQueueTest.add(mower);
