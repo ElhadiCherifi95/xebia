@@ -13,7 +13,8 @@ git pull origin
 ```
 ### Prérequis
 
-* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Compiler Veuillez changer votre variable d'environnement JAVA_HOME pour pointer vers la bonne jdk
+* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Compiler 
+  NB: Veuillez changer votre variable d'environnement JAVA_HOME pour pointer vers la bonne jdk
 * [Maven](https://maven.apache.org/) - Dependency Management
 
 ### Installation
