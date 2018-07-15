@@ -2,7 +2,7 @@ package fr.xebia.mowitnow.model;
 
 
 /**
- * Classe de mapping d'une surface d'une tondeuse
+ * Classe de mapping d'une surface d'une tondeuse composé d'une {@link fr.xebia.mowitnow.model.Coordinates} qui correspond au coin supérieur droit.
  * 
  * @author Elhadi CHERIFI
  * 
@@ -23,13 +23,7 @@ public class Surface extends Coordinates {
 	 */
 	public boolean isValidCoordinatesInSurface(Coordinates coordinates) {
 		return this.getAbciss()>=coordinates.getAbciss() && this.getOrdinate()>=coordinates.getOrdinate(); 
-	}
-
-	
-
-	
-	
-	
+	}	
 	
 
 }

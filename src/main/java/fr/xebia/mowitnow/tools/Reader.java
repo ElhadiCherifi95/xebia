@@ -16,7 +16,7 @@ import fr.xebia.mowitnow.model.Position;
 import fr.xebia.mowitnow.model.Surface;
 
 /**
- * Classe de lecture du fichier initial et de préparation de l'environnement
+ * Classe de lecture du fichier initial et de préparation de la {@link fr.xebia.mowitnow.model.Surface} et de la queue de {@link fr.xebia.mowitnow.model.Mower}
  * 
  * 
  * @author Elhadi CHERIFI
@@ -134,7 +134,5 @@ public class Reader {
 	public void setQueueMowers(Queue<Mower> queueMowers) {
 		this.queueMowers = queueMowers;
 	}
-
-
 
 }

@@ -4,7 +4,7 @@ import fr.xebia.mowitnow.enumeration.Orientation;
 
 
 /**
- * Classe de mapping de la position d'une tondeuse
+ * Classe de mapping de la position d'une tondeuse: composé d'une {@link fr.xebia.mowitnow.model.Coordinates} et d'une {@link fr.xebia.mowitnow.enumeration.Orientation}
  * 
  * @author Elhadi CHERIFI
  * 
@@ -57,8 +57,7 @@ public class Position {
 	 */
 	public void setOrientation(Orientation orientation) {
 		this.orientation = orientation;
-	}
-	
+	}	
 	
 
 	/* (non-Javadoc)
@@ -100,11 +99,7 @@ public class Position {
 	 */
 	@Override
 	public String toString() {
-		return coordinates + " " + orientation + "\n";
-	}
-	
-	
-	
-	
+		return coordinates + " " + orientation;
+	}	
 
 }

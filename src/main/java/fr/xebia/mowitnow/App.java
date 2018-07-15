@@ -3,12 +3,17 @@ package fr.xebia.mowitnow;
 import fr.xebia.mowitnow.exceptions.FileContentException;
 import fr.xebia.mowitnow.tools.Reader;
 
+/**
+ * Classe Main du projet MowItNow
+ * 
+ * @author Elhadi CHERIFI
+ *
+ */
 public class App {
 	
 	public static void main(String[] args) throws FileContentException {
 		
-		Reader reader;
-		
+		Reader reader;		
 		
 		if (args.length > 0) {			
 			reader = new Reader(args[0]);			

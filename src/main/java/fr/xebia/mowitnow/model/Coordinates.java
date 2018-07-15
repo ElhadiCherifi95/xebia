@@ -1,6 +1,6 @@
 package fr.xebia.mowitnow.model;
 /**
- * Classe de mapping des coordonnées d'une tondeuse
+ * Classe de mapping des coordonnées d'une tondeuse composé de deux entiers (abcisse et ordonnée) pour repérer une tondeuse sur la surface
  * 
  * @author Elhadi CHERIFI
  */
@@ -28,8 +28,6 @@ public class Coordinates {
 		}
 		
 	}
-
-
 
 	/**
 	 * @return the abciss
@@ -103,11 +101,6 @@ public class Coordinates {
 	};
 
 
-
-
-	
-
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -119,8 +112,6 @@ public class Coordinates {
 		result = prime * result + ordinate;
 		return result;
 	}
-
-
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -141,8 +132,6 @@ public class Coordinates {
 		return true;
 	}
 
-
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -150,8 +139,5 @@ public class Coordinates {
 	public String toString() {
 		return abciss + " " + ordinate;
 	}
-
-
-
 
 }

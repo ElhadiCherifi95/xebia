@@ -24,9 +24,7 @@ public enum Control {
 		public Position apply(Position position) {return new Position(position.getOrientation().forward(position.getCoordinates()), position.getOrientation());}
 	};
 	
-	private final String control;
-	
-	
+	private final String control;	
 
 	/**
 	 * Constructeur de l'enumeration des contrôles appliquées à une tondeuse
@@ -36,24 +34,6 @@ public enum Control {
 		this.control = control;
 	}
 
-
-
-	/**
-	 * Getter de l'enumeration controle à partir d'un char
-	 * @return the control
-	 */
-	public String getControl() {
-		return control;
-	}
-	
-	
-	/**
-	 * méthode abstraite, à implémenter pour chaque élement de l'énum qui permet d'appliquer un controle sur la position d'une tondeuse
-	 * @param la position initiale de la tondeuse
-	 * @return la position actualisée de la tondeuse après aplication de la commande
-	 */
-	public abstract Position apply(Position position);
-	
 	/**
 	 * Méthode qui récupère le controle à partir d'un string
 	 * @return l'orientation
@@ -75,5 +55,22 @@ public enum Control {
         }
 		
 	}
+
+	/**
+	 * Getter de l'enumeration controle 
+	 * @return the control
+	 */
+	public String getControl() {
+		return control;
+	}
+	
+	
+	/**
+	 * Méthode abstraite, à implémenter pour chaque élement de l'énum qui permet d'appliquer un controle sur la position d'une tondeuse
+	 * @param la position initiale de la tondeuse
+	 * @return la position actualisée de la tondeuse après aplication de la commande
+	 */
+	public abstract Position apply(Position position);	
+	
 	
 }

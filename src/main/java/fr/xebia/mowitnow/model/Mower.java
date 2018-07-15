@@ -6,7 +6,7 @@ import java.util.Queue;
 import fr.xebia.mowitnow.enumeration.Control;
 
 /**
- * Classe de mapping d'une tondeuse
+ * Classe de mapping d'une tondeuse composé d'une {@link fr.xebia.mowitnow.model.Surface}, {@link fr.xebia.mowitnow.model.Position} et d'une queue de {@link fr.xebia.mowitnow.enumeration.Control}
  * 
  * 
  * @author Elhadi CHERIFI
@@ -102,18 +102,6 @@ public class Mower {
 		this.surface = surface;
 	}
 
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	/*@Override
-	public boolean equals(Object obj) {
-		Mower mower= (Mower) obj;
-		return mower.getSurface() ==this.surface && mower.getPosition() ==this.position && this.getQueueControles().equals(mower.getQueueControles());
-	}*/
-
-	
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -126,7 +114,6 @@ public class Mower {
 		result = prime * result + ((surface == null) ? 0 : surface.hashCode());
 		return result;
 	}
-
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -158,15 +145,12 @@ public class Mower {
 		return true;
 	}
 
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		return "Mower [position=" + position + ", surface=" + surface + ", queueControles=" + queueControles + "]";
-	}
-	
-	
+	}	
 	
 }
